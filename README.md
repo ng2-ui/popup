@@ -13,6 +13,8 @@ Angular2 Popup(ModaL) directive
 
 2. add `map` and `packages` to your `systemjs.config.js`
 
+        map['ng2-overlay'] = 'node_modules/ng2-overlay'
+        packages['ng2-overlay'] = { main: 'dist/index.js', defaultExtension: 'js']
         map['ng2-popup'] = 'node_modules/ng2-popup'
         packages['ng2-popup'] = { main: 'dist/index.js', defaultExtension: 'js']
 

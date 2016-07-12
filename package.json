@@ -1,7 +1,7 @@
 {
-  "name": "ng2-tooltip-overlay",
-  "version": "0.1.3",
-  "description": "Angular2 Tooltip Directive",
+  "name": "ng2-popup",
+  "version": "0.1.1",
+  "description": "Angular2 Popup Directive",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsvalley/ng2-tooltip-overlay.git"
+    "url": "git+https://github.com/jsvalley/ng2-popup.git"
   },
   "author": "Allen Kim <allenhwkim@gmail.com>",
   "bugs": {
-    "url": "https://github.com/jsvalley/ng2-tooltip-overlay/issues"
+    "url": "https://github.com/jsvalley/ng2-popup/issues"
   },
-  "homepage": "https://github.com/jsvalley/ng2-tooltip-overlay#readme",
+  "homepage": "https://github.com/jsvalley/ng2-popup#readme",
   "dependencies": {
     "@angular/common": "2.0.0-rc.3",
     "@angular/compiler": "2.0.0-rc.3",

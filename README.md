@@ -1,8 +1,8 @@
 # ng2-popup
 Angular2 Popup(ModaL) directive
 
-<a href="https://plnkr.co/edit/qmmUxn?p=preview">
-  <img src="http://i.imgur.com/ezWv5Jw.png" width="50% border="1" />
+<a href="https://plnkr.co/edit/zaESbL?p=preview">
+  <img src="http://i.imgur.com/AsvUIGs.png" width="50% border="1" />
 </a>
 
 ## Install

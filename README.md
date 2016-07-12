@@ -69,16 +69,17 @@ Angular2 Popup(ModaL) directive
        * title: Title string
        * message: message string
        * buttons: button functions. e.g.
+       
         
-             {
-                OK: () => {
-                  this.message = "Ok button is pressed";
-                },
-                CANCEL: () => {
-                  this.message = "Cancel button is pressed";
-                  this.popup.close();
-                }
-             }
-   
+               {
+                  OK: () => {
+                    this.message = "Ok button is pressed";
+                  },
+                  CANCEL: () => {
+                    this.message = "Cancel button is pressed";
+                    this.popup.close();
+                  }
+               }
+     
 2. close()
    closes the currently opened popup.

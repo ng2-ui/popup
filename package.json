@@ -1,6 +1,6 @@
 {
   "name": "ng2-popup",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Angular2 Popup Directive",
   "license": "MIT",
   "main": "dist/index.js",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsvalley/ng2-popup.git"
+    "url": "git+https://github.com/ng2-ui/ng2-popup.git"
   },
   "author": "Allen Kim <allenhwkim@gmail.com>",
   "bugs": {
-    "url": "https://github.com/jsvalley/ng2-popup/issues"
+    "url": "https://github.com/ng2-ui/ng2-popup/issues"
   },
-  "homepage": "https://github.com/jsvalley/ng2-popup#readme",
+  "homepage": "https://github.com/ng2-ui/ng2-popup#readme",
   "dependencies": {
     "@angular/common": "2.0.0-rc.3",
     "@angular/compiler": "2.0.0-rc.3",

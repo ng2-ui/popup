@@ -50,7 +50,7 @@ Angular2 Popup(ModaL) directive
 
 1. open(compoment, options)  
    opens popup with the given compnent and options
-   
+
    * component: Component
      Any component. To open a message popup, use `Ng2MessagePopupComponent` 
       
@@ -84,3 +84,15 @@ Angular2 Popup(ModaL) directive
        ```
 2. close()
    closes the currently opened popup.
+ 
+
+## To Contribute
+
+### To start
+
+    $ git clone https://github.com/ng2-ui/ng2-map.git
+    $ cd ng2-popup
+    $ npm install
+    $ npm start
+
+

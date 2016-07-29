@@ -5,6 +5,7 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
+    "start": "http-server -o",
     "build": "./build.sh"
   },
   "repository": {
@@ -35,6 +36,7 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "http-server": "^0.9.0",
     "ng2-inline-template": "^0.1.1",
     "typescript": "^1.8.10",
     "typings": "^1.0.4"

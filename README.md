@@ -18,6 +18,20 @@ Angular2 Popup(ModaL) directive
         map['ng2-popup'] = 'node_modules/ng2-popup'
         packages['ng2-popup'] = { main: 'dist/index.js', defaultExtension: 'js']
 
+## Run locally and test it
+
+1. build and run 
+
+      For Windows Environment (in CMD)
+          $ .\build.cmd
+    
+      For Mac Environment (in terminal)
+          $  ./build.sh
+
+2. start the server
+
+      $ npm start
+      
 ## Use it in your code
 
 1. Import directives and add `ng2-popup` to your component

@@ -5,7 +5,8 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "./build.sh"
+    "build": "./build.cmd",
+    "start": "http-server -o"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,9 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "http-server": "^0.9.0",
     "ng2-inline-template": "^0.1.1",
+    "rimraf": "^2.5.4",
     "typescript": "^1.8.10",
     "typings": "^1.0.4"
   }

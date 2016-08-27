@@ -15,52 +15,70 @@ Plunker Example: https://plnkr.co/edit/zaESbL?p=preview"
 
 2. add `map` and `packages` to your `systemjs.config.js`
 
-        map['ng2-overlay'] = 'node_modules/ng2-overlay'
-        packages['ng2-overlay'] = { main: 'dist/index.js', defaultExtension: 'js']
-        map['ng2-popup'] = 'node_modules/ng2-popup'
-        packages['ng2-popup'] = { main: 'dist/index.js', defaultExtension: 'js']
+        map['ng2-popup'] = 'node_modules/ng2-popup/dist';
+        packages['ng2-popup'] = { main: 'index.js', defaultExtension: 'js' }
 
-## Run locally and test it
+3. import Ng2PopupModule to your AppModule
 
-1. build and run 
+        import { NgModule } from '@angular/core';
+        import { FormsModule } from "@angular/forms";
+        import { BrowserModule  } from '@angular/platform-browser';
+        import { AppComponent } from './app.component';
+        import { Ng2PopupModule } from 'ng2-popup';
+        
+        @NgModule({
+          imports: [BrowserModule, FormsModule, Ng2PopupModule],
+          declarations: [AppComponent],
+          bootstrap: [ AppComponent ]
+        })
+        export class AppModule { }
 
-      For Windows Environment (in CMD)
-          $ .\build.cmd
-    
-      For Mac Environment (in terminal)
-          $  ./build.sh
+For full example, please check out `test` directory to see the example of;
 
-2. start the server
+  - `systemjs.config.js`
+  - `app.module.ts`
+  -  and `app.component.ts`.
 
-      $ npm start
-      
 ## Use it in your code
 
-1. Import directives and add `ng2-popup` to your component
+    <ng2-popup #popup></ng2-popup>,
 
-        import { Ng2MessagePopupComponent, Ng2PopupComponent} from 'ng2-popup';
-
-        @Component({
-          selector: 'my-app',
-          templateUrl: '<ng2-popup #popup></ng2-popup>',
-          directives: [ Ng2PopupComponent ]
-        })
-
-2. To open/close popup from your component, 
-   add ViewChild line into your component
+To open/close popup from your component, 
+ add ViewChild line into your component
    
-        export class AppComponent { 
-          @ViewChild(Ng2PopupComponent) popup: Ng2PopupComponent;
-     
-          openPopup() {
-            this.popup.open(Ng2MessagePopupComponent, {
-              title: 'My Title',
-              messge: 'My Message'
-            }
-            ..
+      export class AppComponent { 
+        @ViewChild(Ng2PopupComponent) popup: Ng2PopupComponent;
+    
+        openPopup() {
+          this.popup.open(Ng2MessagePopupComponent, {
+            title: 'My Title',
+            messge: 'My Message'
           }
+          ..
         }
-        
+      }
+
+## **ng2-ui** welcomes new members and contributors
+
+This module is only improved and maintained by contributors like you.
+
+As a contributor, it's NOT required to be skilled in Javascript nor Angular2. 
+You are only to be open-minded and interested in helping others.
+As a contributor, you do following;
+
+  * Updating README.md
+  * Improving code comments
+  * Answering issues and building FAQ
+  * Documentation
+  * Translation
+
+In result of your active contribution, you will be listed as a core contributor
+on https://ng2-ui.github.io, and a member of ng2-ui too.
+
+If you are interested in becoming a contributor and/or a member of ng-ui,
+please send me email to `allenhwkim AT gmail.com` with your github id. 
+
+
 
 ### Ng2PopupCompoment Properties and functions
 
@@ -87,6 +105,7 @@ Plunker Example: https://plnkr.co/edit/zaESbL?p=preview"
        * title: Title string
        * message: message string
        * buttons: button functions. e.g.
+       
        ```
          {
             OK: () => {
@@ -102,7 +121,7 @@ Plunker Example: https://plnkr.co/edit/zaESbL?p=preview"
    closes the currently opened popup.
  
 
-## To Contribute
+## For Developers
 
 ### To start
 
@@ -111,4 +130,18 @@ Plunker Example: https://plnkr.co/edit/zaESbL?p=preview"
     $ npm install
     $ npm start
 
+
+## Run locally and test it
+
+1. build and run 
+
+      For Windows Environment (in CMD)
+          $ .\build.cmd
+    
+      For Mac Environment (in terminal)
+          $  ./build.sh
+
+2. start the server
+
+      $ npm start
 

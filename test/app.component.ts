@@ -27,7 +27,6 @@ class CustomPopupComponent {
     <br/>
     {{message}}
     `,
-  directives: [Ng2PopupComponent],
   encapsulation: ViewEncapsulation.None,
   styles: [`
    .popup-container.custom {

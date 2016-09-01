@@ -5,7 +5,8 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "start": "http-server -o"
+    "start": "http-server -o",
+    "build": "./build.sh"
   },
   "repository": {
     "type": "git",

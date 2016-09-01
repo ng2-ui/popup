@@ -27,6 +27,7 @@ class CustomPopupComponent {
     <br/>
     {{message}}
     `,
+  entryComponents: [CustomPopupComponent],
   encapsulation: ViewEncapsulation.None,
   styles: [`
    .popup-container.custom {

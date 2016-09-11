@@ -16,7 +16,7 @@ Plunker Example: https://plnkr.co/edit/zaESbL?p=preview"
 2. add `map` and `packages` to your `systemjs.config.js`
 
         map['ng2-popup'] = 'node_modules/ng2-popup/dist';
-        packages['ng2-popup'] = { main: 'index.js', defaultExtension: 'js' }
+        packages['ng2-popup'] = { main: 'ng2-popup.umd.js', defaultExtension: 'js' }
 
 3. import Ng2PopupModule to your AppModule
 

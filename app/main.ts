@@ -1,3 +1,7 @@
+// The browser platform with a compiler
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+// The app module
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from "@angular/forms";
@@ -11,3 +15,7 @@ import { Ng2PopupModule }  from 'ng2-popup';
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
+
+// Compile and launch the module
+platformBrowserDynamic().bootstrapModule(AppModule);
+

@@ -1,6 +1,6 @@
 {
   "name": "ng2-popup",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Angular2 Popup Directive",
   "license": "MIT",
   "main": "dist/ng2-popup.umd.js",

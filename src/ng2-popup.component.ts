@@ -1,6 +1,5 @@
 import {
   Component,
-  Type,
   ViewChild,
   Input,
   ViewContainerRef,
@@ -11,7 +10,7 @@ import { OverlayManager, Overlay, OverlayDirective } from 'ng2-overlay';
 
 @Component({
   selector: 'ng2-popup',
-  directives: [ <Type>OverlayDirective ],
+  directives: [ OverlayDirective ],
   providers: [ OverlayManager ],
   template: `
     <div id="ng2-popup-overlay"> <!-- <-- this is overlay -->

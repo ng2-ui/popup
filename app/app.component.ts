@@ -1,4 +1,5 @@
 import {Component, Type, ViewChild, ViewEncapsulation} from '@angular/core'
+//noinspection TypeScriptCheckImport
 import { Ng2MessagePopupComponent, Ng2PopupComponent} from 'ng2-popup';
 
 @Component({
@@ -8,7 +9,7 @@ import { Ng2MessagePopupComponent, Ng2PopupComponent} from 'ng2-popup';
     <button (click)="popup.close()">close</button>
   `
 })
-class CustomPopupComponent {
+export class CustomPopupComponent {
   number: number = 0;
 }
 
@@ -27,7 +28,6 @@ class CustomPopupComponent {
     <br/>
     {{message}}
     `,
-  entryComponents: [CustomPopupComponent],
   encapsulation: ViewEncapsulation.None,
   styles: [`
    .popup-container.custom {
@@ -43,6 +43,7 @@ export class AppComponent {
   constructor() {}
 
   openPopup(size, title) {
+    //noinspection TypeScriptUnresolvedFunction
     this.popup.open(Ng2MessagePopupComponent, {
       classNames: size,
       title: title,
@@ -53,6 +54,7 @@ export class AppComponent {
         },
         CANCEL: () => {
           this.message = "Cancel button is pressed";
+          //noinspection TypeScriptUnresolvedFunction
           this.popup.close();
         }
       }
@@ -60,6 +62,7 @@ export class AppComponent {
   }
   
   openCustomPopup() {
+    //noinspection TypeScriptUnresolvedFunction
     this.popup.open(CustomPopupComponent, {
       classNames: 'custom',
       closeButton: false,

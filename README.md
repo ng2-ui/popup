@@ -52,7 +52,7 @@ To open/close popup from your component,
         openPopup() {
           this.popup.open(Ng2MessagePopupComponent, {
             title: 'My Title',
-            messge: 'My Message'
+            message: 'My Message'
           }
           ..
         }

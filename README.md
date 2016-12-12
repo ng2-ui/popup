@@ -1,7 +1,7 @@
 # ng2-popup
 Angular2 Popup(ModaL) directive
 
-<a href="https://ng2-ui.github.io/#/popup">
+<a href="https://rawgit.com/ng2-ui/ng2-popup/master/app/index.html">
   <img src="http://i.imgur.com/AsvUIGs.png" width="50% border="1" />
 </a>
 

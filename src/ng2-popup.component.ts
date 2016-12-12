@@ -6,12 +6,12 @@ import {
   ViewEncapsulation,
   ComponentFactoryResolver
 } from '@angular/core';
-import { OverlayManager, Overlay, OverlayDirective } from 'ng2-overlay';
+import { Ng2OverlayManager, Ng2Overlay, Ng2OverlayDirective } from 'ng2-overlay';
 
 @Component({
   selector: 'ng2-popup',
-  directives: [ OverlayDirective ],
-  providers: [ OverlayManager ],
+  directives: [ Ng2OverlayDirective ],
+  providers: [ Ng2OverlayManager ],
   template: `
     <div id="ng2-popup-overlay"> <!-- <-- this is overlay -->
       <div class="popup-container {{classNames}}" [ngClass]="{opened: opened}">
@@ -59,13 +59,13 @@ export class Ng2PopupComponent {
 
   constructor(
     private componentResolver: ComponentFactoryResolver,
-    public overlayManager: OverlayManager
+    public overlayManager: Ng2OverlayManager
   ) {}
   
   ngAfterViewInit() {
     let overlayEl = this.marker.element.nativeElement.parentElement.parentElement;
     
-    let overlay = new Overlay(overlayEl, {
+    let overlay = new Ng2Overlay(overlayEl, {
       id: 'ng2-popup-overlay',
       windowOverlay: true,
       position: 'center center'

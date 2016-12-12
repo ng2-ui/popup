@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var ng2_overlay_1 = require('ng2-overlay');
+var core_1 = require("@angular/core");
+var ng2_overlay_1 = require("ng2-overlay");
 var Ng2PopupComponent = (function () {
     function Ng2PopupComponent(componentResolver, overlayManager) {
         this.componentResolver = componentResolver;
@@ -17,7 +17,7 @@ var Ng2PopupComponent = (function () {
     }
     Ng2PopupComponent.prototype.ngAfterViewInit = function () {
         var overlayEl = this.marker.element.nativeElement.parentElement.parentElement;
-        var overlay = new ng2_overlay_1.Overlay(overlayEl, {
+        var overlay = new ng2_overlay_1.Ng2Overlay(overlayEl, {
             id: 'ng2-popup-overlay',
             windowOverlay: true,
             position: 'center center'
@@ -43,22 +43,23 @@ var Ng2PopupComponent = (function () {
         }
         catch (e) { }
     };
-    __decorate([
-        core_1.ViewChild('marker', { read: core_1.ViewContainerRef }), 
-        __metadata('design:type', Object)
-    ], Ng2PopupComponent.prototype, "marker", void 0);
-    Ng2PopupComponent = __decorate([
-        core_1.Component({
-            selector: 'ng2-popup',
-            directives: [ng2_overlay_1.OverlayDirective],
-            providers: [ng2_overlay_1.OverlayManager],
-            template: "\n    <div id=\"ng2-popup-overlay\"> <!-- <-- this is overlay -->\n      <div class=\"popup-container {{classNames}}\" [ngClass]=\"{opened: opened}\">\n        <div *ngIf=\"closeButton != false\" class=\"close-popup\" (click)=\"close()\">x</div>\n        <div class=\"marker\" #marker></div> <!-- to position popup component -->\n        <!-- popup component will be here -->\n      </div>\n    </div>\n  ",
-            styles: ["\n    .popup-container { \n      background: #fff;\n      border: 1px solid #ccc;\n      box-shadow: 0 5px 15px rgba(0,0,0,.5);\n      border-radius: 5px;\n      width: 600px;\n      display: none;\n    }\n    .popup-container.opened { \n      display: block;\n    }\n    .close-popup {\n      font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n      float: right; \n      cursor: pointer; \n      font-size: 21px;\n      line-height: 1;\n      text-shadow: 0 1px 0 #fff;\n      opacity: 0.2;\n      padding: 10px;\n    }\n    /*.marker ~ * { display:block; background: #fff}*/\n    .popup-container.small { width: 300px}\n    .popup-container.large { width: 900px}\n  "],
-            encapsulation: core_1.ViewEncapsulation.None
-        }), 
-        __metadata('design:paramtypes', [core_1.ComponentFactoryResolver, ng2_overlay_1.OverlayManager])
-    ], Ng2PopupComponent);
     return Ng2PopupComponent;
 }());
+__decorate([
+    core_1.ViewChild('marker', { read: core_1.ViewContainerRef }),
+    __metadata("design:type", Object)
+], Ng2PopupComponent.prototype, "marker", void 0);
+Ng2PopupComponent = __decorate([
+    core_1.Component({
+        selector: 'ng2-popup',
+        directives: [ng2_overlay_1.Ng2OverlayDirective],
+        providers: [ng2_overlay_1.Ng2OverlayManager],
+        template: "\n    <div id=\"ng2-popup-overlay\"> <!-- <-- this is overlay -->\n      <div class=\"popup-container {{classNames}}\" [ngClass]=\"{opened: opened}\">\n        <div *ngIf=\"closeButton != false\" class=\"close-popup\" (click)=\"close()\">x</div>\n        <div class=\"marker\" #marker></div> <!-- to position popup component -->\n        <!-- popup component will be here -->\n      </div>\n    </div>\n  ",
+        styles: ["\n    .popup-container { \n      background: #fff;\n      border: 1px solid #ccc;\n      box-shadow: 0 5px 15px rgba(0,0,0,.5);\n      border-radius: 5px;\n      width: 600px;\n      display: none;\n    }\n    .popup-container.opened { \n      display: block;\n    }\n    .close-popup {\n      font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n      float: right; \n      cursor: pointer; \n      font-size: 21px;\n      line-height: 1;\n      text-shadow: 0 1px 0 #fff;\n      opacity: 0.2;\n      padding: 10px;\n    }\n    /*.marker ~ * { display:block; background: #fff}*/\n    .popup-container.small { width: 300px}\n    .popup-container.large { width: 900px}\n  "],
+        encapsulation: core_1.ViewEncapsulation.None
+    }),
+    __metadata("design:paramtypes", [core_1.ComponentFactoryResolver,
+        ng2_overlay_1.Ng2OverlayManager])
+], Ng2PopupComponent);
 exports.Ng2PopupComponent = Ng2PopupComponent;
 //# sourceMappingURL=ng2-popup.component.js.map

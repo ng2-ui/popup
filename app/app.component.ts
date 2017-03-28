@@ -1,6 +1,6 @@
 import {Component, Type, ViewChild, ViewEncapsulation} from '@angular/core'
 //noinspection TypeScriptCheckImport
-import { Ng2MessagePopupComponent, Ng2PopupComponent} from 'ng2-popup';
+import { NguiMessagePopupComponent, NguiPopupComponent} from '@ngui/popup';
 
 @Component({
   template: `
@@ -24,7 +24,7 @@ export class CustomPopupComponent {
     <br/>
     <button (click)="openCustomPopup()">open custom popup</button>
     <br/>
-    <ng2-popup #popup></ng2-popup>
+    <ngui-popup #popup></ngui-popup>
     <br/>
     {{message}}
     `,
@@ -37,14 +37,14 @@ export class CustomPopupComponent {
 })
 export class AppComponent {
 
-  @ViewChild(Ng2PopupComponent) popup: Ng2PopupComponent;
+  @ViewChild(NguiPopupComponent) popup: NguiPopupComponent;
   message: string;
 
   constructor() {}
 
   openPopup(size, title) {
     //noinspection TypeScriptUnresolvedFunction
-    this.popup.open(Ng2MessagePopupComponent, {
+    this.popup.open(NguiMessagePopupComponent, {
       classNames: size,
       title: title,
       message: "This is message given using popup.open()",

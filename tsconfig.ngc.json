@@ -24,7 +24,7 @@
     "outDir": "dist",
     "baseUrl": "src",
     "paths": {
-      "ng2-popup": ["./index"]
+      "@ngui/popup": ["./index"]
     }
   },
   "files": [

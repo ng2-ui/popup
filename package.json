@@ -1,9 +1,9 @@
 {
-  "name": "ng2-popup",
-  "version": "0.4.0",
+  "name": "@ngui/popup",
+  "version": "0.5.0",
   "description": "Angular2 Popup Directive",
   "license": "MIT",
-  "main": "dist/ng2-popup.umd.js",
+  "main": "dist/popup.umd.js",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -18,14 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ng2-ui/ng2-popup.git"
+    "url": "git+https://github.com/ng2-ui/popup.git"
   },
   "author": "Allen Kim <allenhwkim@gmail.com>",
   "bugs": {
-    "url": "https://github.com/ng2-ui/ng2-popup/issues"
+    "url": "https://github.com/ng2-ui/popup/issues"
   },
-  "homepage": "https://github.com/ng2-ui/ng2-popup#readme",
+  "homepage": "https://github.com/ng2-ui/popup#readme",
   "dependencies": {
+    "@ngui/overlay": "^0.8.0",
     "ng2-overlay": "^0.7.0"
   },
   "devDependencies": {

@@ -4,7 +4,7 @@ const config = {
   resolve: {
     extensions: ['', '.ts', '.webpack.js', '.web.js', '.js'],
     alias: {
-      'ng2-popup': '../src/index.ts'
+      '@ngui/popup': '../src/index.ts'
     }
   },
   devtool: 'source-map',

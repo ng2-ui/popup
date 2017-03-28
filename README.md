@@ -1,7 +1,7 @@
-# ng2-popup
+# popup
 Angular2 Popup(ModaL) directive
 
-<a href="https://rawgit.com/ng2-ui/ng2-popup/master/app/index.html">
+<a href="https://rawgit.com/ng2-ui/popup/master/app/index.html">
   <img src="http://i.imgur.com/AsvUIGs.png" width="50% border="1" />
 </a>
 
@@ -9,25 +9,24 @@ Plunker Example: https://plnkr.co/edit/zaESbL?p=preview"
 
 ## Install
 
-1. install ng2-popup
+1. install @ngui/popup
 
-        $ npm install ng2-popup --save
+        $ npm install @ngui/popup --save
 
 2. add `map` and `packages` to your `systemjs.config.js`
 
-        map['ng2-popup'] = 'node_modules/ng2-popup/dist';
-        packages['ng2-popup'] = { main: 'ng2-popup.umd.js', defaultExtension: 'js' }
+        map['@ngui/popup'] = 'node_modules/@ngui/popup/dist/popup.umd.js';
 
-3. import Ng2PopupModule to your AppModule
+3. import NguiPopupModule to your AppModule
 
         import { NgModule } from '@angular/core';
         import { FormsModule } from "@angular/forms";
         import { BrowserModule  } from '@angular/platform-browser';
         import { AppComponent } from './app.component';
-        import { Ng2PopupModule } from 'ng2-popup';
+        import { NguiPopupModule } from '@ngui/popup';
         
         @NgModule({
-          imports: [BrowserModule, FormsModule, Ng2PopupModule],
+          imports: [BrowserModule, FormsModule, NguiPopupModule],
           declarations: [AppComponent],
           bootstrap: [ AppComponent ]
         })
@@ -41,13 +40,13 @@ For full example, please check out `test` directory to see the example of;
 
 ## Use it in your code
 
-    <ng2-popup #popup></ng2-popup>,
+    <ngui-popup #popup></ngui-popup>,
 
 To open/close popup from your component, 
  add ViewChild line into your component
    
       export class AppComponent { 
-        @ViewChild(Ng2PopupComponent) popup: Ng2PopupComponent;
+        @ViewChild(NguiPopupComponent) popup: NguiPopupComponent;
     
         openPopup() {
           this.popup.open(Ng2MessagePopupComponent, {
@@ -80,7 +79,7 @@ please send me email to `allenhwkim AT gmail.com` with your github id.
 
 
 
-### Ng2PopupCompoment Properties and functions
+### NguiPopupCompoment Properties and functions
 
 1. open(compoment, options)  
    opens popup with the given compnent and options
@@ -89,7 +88,7 @@ please send me email to `allenhwkim AT gmail.com` with your github id.
      Any component. To open a message popup, use `Ng2MessagePopupComponent` 
       
      There are two properties will be added when a component is used with open function 
-       1. popup: instance of Ng2PopupComponent, 
+       1. popup: instance of NguiPopupComponent, 
           so that you can open and close the popup within your component
        2. popupOptions: options passed from open function
 
@@ -125,8 +124,8 @@ please send me email to `allenhwkim AT gmail.com` with your github id.
 
 ### To start
 
-    $ git clone https://github.com/ng2-ui/ng2-map.git
-    $ cd ng2-popup
+    $ git clone https://github.com/ng2-ui/popup.git
+    $ cd popup
     $ npm install
     $ npm start
 

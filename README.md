@@ -1,6 +1,14 @@
 # popup
 Angular2 Popup(ModaL) directive
 
+## IMPORTANT NOTICE
+
+After 0.5.0 or higher, `ng2-popup` has been changed to `@ngui/popup`. Here are the changes;
+
+* Module `ng2-popup` is changed to `@ngui/popup`.
+* Direvtive `ng2-popup` is changed to `ngui-popup`.
+* Class name `Ng2PopupModule` is changed to `NguiPopupModule`.
+
 <a href="https://rawgit.com/ng2-ui/popup/master/app/index.html">
   <img src="http://i.imgur.com/AsvUIGs.png" width="50% border="1" />
 </a>

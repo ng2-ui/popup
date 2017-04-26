@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var popup_component_1 = require("./popup.component");
 exports.NguiPopupComponent = popup_component_1.NguiPopupComponent;
 var message_popup_component_1 = require("./message-popup.component");

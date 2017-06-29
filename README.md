@@ -1,13 +1,15 @@
 # popup
-Angular2 Popup(ModaL) directive
+Angular2 Popup(Modal) directive
 
 ## IMPORTANT NOTICE
 
 After 0.5.0 or higher, `ng2-popup` has been changed to `@ngui/popup`. Here are the changes;
 
 * Module `ng2-popup` is changed to `@ngui/popup`.
-* Direvtive `ng2-popup` is changed to `ngui-popup`.
+* Directive `ng2-popup` is changed to `ngui-popup`.
 * Class name `Ng2PopupModule` is changed to `NguiPopupModule`.
+* Components `Ng2PopupComponent` and `Ng2MessagePopupComponent` are changed to
+  `NguiPopupComponent` and `NguiMessagePopupComponent`
 
 <a href="https://rawgit.com/ng2-ui/popup/master/app/index.html">
   <img src="http://i.imgur.com/AsvUIGs.png" width="50% border="1" />
@@ -57,7 +59,7 @@ To open/close popup from your component,
         @ViewChild(NguiPopupComponent) popup: NguiPopupComponent;
     
         openPopup() {
-          this.popup.open(Ng2MessagePopupComponent, {
+          this.popup.open(NguiMessagePopupComponent, {
             title: 'My Title',
             message: 'My Message'
           }
@@ -93,7 +95,7 @@ please send me email to `allenhwkim AT gmail.com` with your github id.
    opens popup with the given compnent and options
 
    * component: Component
-     Any component. To open a message popup, use `Ng2MessagePopupComponent` 
+     Any component. To open a message popup, use `NguiMessagePopupComponent` 
       
      There are two properties will be added when a component is used with open function 
        1. popup: instance of NguiPopupComponent, 
@@ -107,7 +109,7 @@ please send me email to `allenhwkim AT gmail.com` with your github id.
      * closeButton: default true.
         if false, there will be no close button
         
-     For Ng2MessagePopupComponent
+     For NguiMessagePopupComponent
      
        * title: Title string
        * message: message string

@@ -4,7 +4,7 @@ import {
   Input,
   ViewContainerRef,
   ViewEncapsulation,
-  ComponentFactoryResolver
+  ComponentFactoryResolver, Output, EventEmitter
 } from '@angular/core';
 import { Ng2OverlayManager, Ng2Overlay, Ng2OverlayDirective } from 'ng2-overlay';
 
@@ -51,6 +51,7 @@ import { Ng2OverlayManager, Ng2Overlay, Ng2OverlayDirective } from 'ng2-overlay'
 })
 export class NguiPopupComponent {
   @ViewChild('marker', {read: ViewContainerRef}) marker;
+  @Output() popupStatusChanged = new EventEmitter<boolean>();
 
   opened: boolean;
   closeButton: boolean;
@@ -84,11 +85,13 @@ export class NguiPopupComponent {
     componentRef.instance.popupOptions = options;
     componentRef.instance.popup = this;
     this.overlayManager.open('ngui-popup-overlay', null); //(id, event)
+    this.popupStatusChanged.emit(this.opened);
   }
 
   close() {
     this.opened = false;
     this.overlayManager.close('ngui-popup-overlay');
     try { this.marker.remove(); } catch(e) {}
+    this.popupStatusChanged.emit(this.opened);
   }
 }

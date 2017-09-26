@@ -29,6 +29,8 @@ import { Ng2OverlayManager, Ng2Overlay, Ng2OverlayDirective } from 'ng2-overlay'
       border-radius: 5px;
       width: 600px;
       display: none;
+      position: absolute;
+      z-index: 100;
     }
     .popup-container.opened { 
       display: block;

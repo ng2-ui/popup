@@ -1,15 +1,9 @@
 # popup
 Angular2 Popup(Modal) directive
 
-## IMPORTANT NOTICE
+## IMPORTANT: NOT-MAINTAINED
+Accepting volunteers and ready to transfer ownership.
 
-After 0.5.0 or higher, `ng2-popup` has been changed to `@ngui/popup`. Here are the changes;
-
-* Module `ng2-popup` is changed to `@ngui/popup`.
-* Directive `ng2-popup` is changed to `ngui-popup`.
-* Class name `Ng2PopupModule` is changed to `NguiPopupModule`.
-* Components `Ng2PopupComponent` and `Ng2MessagePopupComponent` are changed to
-  `NguiPopupComponent` and `NguiMessagePopupComponent`
 
 <a href="https://rawgit.com/ng2-ui/popup/master/app/index.html">
   <img src="http://i.imgur.com/AsvUIGs.png" width="50% border="1" />
